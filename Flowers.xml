@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsi:flowers xmlns:xsi="file://e:/ProjectsForSave/Flowers/Flowers.xsd" >
+<flowers xmlns="file://e:/ProjectsForSave/Flowers/Flowers.xsd" >
 
     <!--WildFlower ________________________________________________________________________________________-->
     <wildFlower nameFlower="Chelidonium" origin="Europe-Japan" reproductionType="by_seed">
