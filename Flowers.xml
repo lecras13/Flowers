@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsi:flowers xmlns:xsi="file://e:/ProjectsForSave/Flowers/Flowers.xsd" >
+
+    <!--WildFlower ________________________________________________________________________________________-->
+    <wildFlower nameFlower="Chelidonium" origin="Europe-Japan" reproductionType="by_seed">
+        <soilType>sod_podzolic</soilType>
+        <color>yellow</color>
+        <growingTips>
+            <temperature>10</temperature>
+            <lightLowing>true</lightLowing>
+            <wateringForWeek>1000</wateringForWeek>
+        </growingTips>
+        <regionType>meadow</regionType>
+    </wildFlower>
+
+    <wildFlower nameFlower="Cornflower" origin="Europe-Asia" reproductionType="by_seed">
+        <soilType>podzolic</soilType>
+        <color>blue</color>
+        <growingTips>
+            <temperature>20</temperature>
+            <lightLowing>true</lightLowing>
+            <wateringForWeek>1000</wateringForWeek>
+        </growingTips>
+        <regionType>field</regionType>
+    </wildFlower>
+
+    <!--DecorativeBloomingFlower __________________________________________________________________________-->
+    <decorativeBloomingFlower nameFlower="Abutilon" origin="Brazilia-South_America" reproductionType="by_seed">
+        <soilType>unpaved</soilType>
+        <color>red</color>
+        <growingTips>
+            <temperature>25</temperature>
+            <lightLowing>true</lightLowing>
+            <wateringForWeek>1500</wateringForWeek>
+        </growingTips>
+        <recommendedAirHumidity>70</recommendedAirHumidity>
+        <presenceOfFruit>false</presenceOfFruit>
+    </decorativeBloomingFlower>
+
+    <decorativeBloomingFlower nameFlower="Spathiphyllum" origin="America" reproductionType="by_leave">
+        <soilType>sod_podzolic</soilType>
+        <color>white</color>
+        <growingTips>
+            <temperature>23</temperature>
+            <lightLowing>true</lightLowing>
+            <wateringForWeek>1500</wateringForWeek>
+        </growingTips>
+        <recommendedAirHumidity>80</recommendedAirHumidity>
+        <presenceOfFruit>false</presenceOfFruit>
+    </decorativeBloomingFlower>
+
+    <!--DecorativeLeafyFlower _____________________________________________________________________________-->
+    <decorativeLeafyFlower nameFlower="Gasteria" origin="South_America" reproductionType="by_stalk">
+        <soilType>podzolic</soilType>
+        <color>green</color>
+        <growingTips>
+            <temperature>24</temperature>
+            <lightLowing>true</lightLowing>
+            <wateringForWeek>400</wateringForWeek>
+        </growingTips>
+        <recommendedAirHumidity>40</recommendedAirHumidity>
+        <leafDischarge>false</leafDischarge>
+    </decorativeLeafyFlower>
+    
+    <decorativeLeafyFlower nameFlower="Solanum" origin="South_America">
+        <soilType>unpaved</soilType>
+        <color>green</color>
+        <growingTips>
+            <temperature>25</temperature>
+            <lightLowing>true</lightLowing>
+            <wateringForWeek>1000</wateringForWeek>
+        </growingTips>
+        <recommendedAirHumidity>80</recommendedAirHumidity>
+        <leafDischarge>false</leafDischarge>
+    </decorativeLeafyFlower>
+
+    <!--SucculentsFlower __________________________________________________________________________________-->
+    <succulentsFlower nameFlower="Pachypodium" origin="Australia-Africa" reproductionType="by_stalk">
+        <soilType>unpaved</soilType>
+        <color>green</color>
+        <growingTips>
+            <temperature>28</temperature>
+            <lightLowing>true</lightLowing>
+            <wateringForWeek>1000</wateringForWeek>
+        </growingTips>
+        <recommendedAirHumidity>50</recommendedAirHumidity>
+        <presenceOfThorns>false</presenceOfThorns>
+    </succulentsFlower>
+    
+    <succulentsFlower nameFlower="Aloe-tree" origin="Africa" reproductionType="by_stalk">
+        <soilType>podzolic</soilType>
+        <color>white</color>
+        <growingTips>
+            <temperature>20</temperature>
+            <lightLowing>false</lightLowing>
+            <wateringForWeek>800</wateringForWeek>
+        </growingTips>
+        <recommendedAirHumidity>50</recommendedAirHumidity>
+        <presenceOfThorns>false</presenceOfThorns>
+    </succulentsFlower>
+</xsi:flowers>

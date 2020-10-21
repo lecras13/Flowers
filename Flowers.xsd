@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!--ENUMS -->
+    <!--ColorType -->
+    <xs:simpleType name="ColorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="blue"></xs:enumeration>
+            <xs:enumeration value="green"></xs:enumeration>
+            <xs:enumeration value="lilac"></xs:enumeration>
+            <xs:enumeration value="pink"></xs:enumeration>
+            <xs:enumeration value="purple"></xs:enumeration>
+            <xs:enumeration value="red"></xs:enumeration>
+            <xs:enumeration value="white"></xs:enumeration>
+            <xs:enumeration value="yellow"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--RegionType -->
+    <xs:simpleType name="RegionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="meadow"></xs:enumeration>
+            <xs:enumeration value="field"></xs:enumeration>
+            <xs:enumeration value="forest"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--ReproductionType -->
+    <xs:simpleType name="ReproductionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="by_leave"></xs:enumeration>
+            <xs:enumeration value="by_stalk"></xs:enumeration>
+            <xs:enumeration value="by_seed"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--SoilType -->
+    <xs:simpleType name="SoilType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="podzolic"></xs:enumeration>
+            <xs:enumeration value="unpaved"></xs:enumeration>
+            <xs:enumeration value="sod_podzolic"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Name -->
+    <xs:simpleType name="NameFlower">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="([a-zA-Z\-]+){1,20}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--GrowingTips -->
+    <xs:complexType name="GrowingTips">
+        <xs:sequence>
+            <xs:element name="temperature" type="xs:integer"/>
+            <xs:element name="lightLowing" type="xs:boolean"/>
+            <xs:element name="wateringForWeek" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="flower" type="Flower" abstract="true"/>
+    <xs:element name="wildFlower" type="WildFlower" substitutionGroup="flower"/>
+    <xs:element name="decorativeBloomingFlower" type="DecorativeBloomingFlower" substitutionGroup="flower"/>
+    <xs:element name="decorativeLeafyFlower" type="DecorativeLeafyFlower" substitutionGroup="flower"/>
+    <xs:element name="succulentsFlower" type="SucculentsFlower" substitutionGroup="flower"/>
+
+    <!--Flowers ___________________________________________________________________________________________-->
+    <xs:element name="flowers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="flower" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Flower ____________________________________________________________________________________________-->
+    <xs:complexType name="Flower" abstract="true">
+        <xs:sequence>
+            <xs:element name="soilType" type="SoilType"/>
+            <xs:element name="color" type="ColorType"/>
+            <xs:element name="growingTips" type="GrowingTips"/>
+        </xs:sequence>
+        <xs:attribute name="nameFlower" type="NameFlower" use="required"/>
+        <xs:attribute name="origin" type="xs:string" use="optional"/>
+        <xs:attribute name="reproductionType" type="ReproductionType" use="optional" default="by_seed"/>
+    </xs:complexType>
+
+    <!--WildFlower ________________________________________________________________________________________-->
+    <xs:complexType name="WildFlower">
+        <xs:complexContent>
+            <xs:extension base="Flower">
+                <xs:sequence>
+                    <xs:element name="regionType" type="RegionType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!--HomeFlower ________________________________________________________________________________________-->
+    <xs:complexType name="HomeFlower">
+        <xs:complexContent>
+            <xs:extension base="Flower">
+                <xs:sequence>
+                    <xs:element name="recommendedAirHumidity" type="xs:positiveInteger"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!--DecorativeBloomingFlower __________________________________________________________________________-->
+    <xs:complexType name="DecorativeBloomingFlower">
+        <xs:complexContent>
+            <xs:extension base="HomeFlower">
+                <xs:sequence>
+                    <xs:element name="presenceOfFruit" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!--DecorativeLeafyFlower _____________________________________________________________________________-->
+    <xs:complexType name="DecorativeLeafyFlower">
+        <xs:complexContent>
+            <xs:extension base="HomeFlower">
+                <xs:sequence>
+                    <xs:element name="leafDischarge" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!--SucculentsFlower __________________________________________________________________________________-->
+    <xs:complexType name="SucculentsFlower">
+        <xs:complexContent>
+            <xs:extension base="HomeFlower">
+                <xs:sequence>
+                    <xs:element name="presenceOfThorns" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>
