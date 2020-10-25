@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/flowers"
+         xsi:schemaLocation="http://www.example.com/flowers flowers.xsd">
+
+    <!--WildFlower ________________________________________________________________________________________-->
+    <wildFlower nameFlower="Chelidonium" origin="Europe-Japan" reproduction="by_seed">
+        <soil>sod_podzolic</soil>
+        <color>yellow</color>
+        <growingTips>
+            <temperature>10</temperature>
+            <lightLoving>true</lightLoving>
+            <wateringForWeek>1000</wateringForWeek>
+        </growingTips>
+        <region>meadow</region>
+        <thornsPresence>false</thornsPresence>
+    </wildFlower>
+
+    <wildFlower nameFlower="Cornflower" origin="Europe-Asia" reproduction="by_seed">
+        <soil>podzolic</soil>
+        <color>blue</color>
+        <growingTips>
+            <temperature>20</temperature>
+            <lightLoving>true</lightLoving>
+            <wateringForWeek>1000</wateringForWeek>
+        </growingTips>
+        <region>field</region>
+        <thornsPresence>false</thornsPresence>
+    </wildFlower>
+
+    <!--HomeFlower ________________________________________________________________________________________-->
+    <homeFlower nameFlower="Abutilon" origin="Brazilia-South_America" reproduction="by_seed">
+        <soil>unpaved</soil>
+        <color>red</color>
+        <growingTips>
+            <temperature>25</temperature>
+            <lightLoving>true</lightLoving>
+            <wateringForWeek>1500</wateringForWeek>
+        </growingTips>
+        <optimalHumidity>70</optimalHumidity>
+        <leafDischarge>false</leafDischarge>
+        <fruitPresence>false</fruitPresence>
+    </homeFlower>
+
+    <homeFlower nameFlower="Gasteria" origin="South_America" reproduction="by_stalk">
+        <soil>podzolic</soil>
+        <color>green</color>
+        <growingTips>
+            <temperature>24</temperature>
+            <lightLoving>true</lightLoving>
+            <wateringForWeek>400</wateringForWeek>
+        </growingTips>
+        <optimalHumidity>40</optimalHumidity>
+        <leafDischarge>false</leafDischarge>
+        <fruitPresence>false</fruitPresence>
+    </homeFlower>
+</flowers>
